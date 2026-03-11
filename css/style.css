@@ -1,0 +1,258 @@
+/* Define default/fallback variables (Night Theme) */
+:root {
+    --bg-main: #121212;
+    --bg-card: #1a1a1a;
+    --text-main: #e0e0e0;
+    --text-muted: #888888;
+    --accent: #76b900; /* Nvidia Green */
+    --nav-bg: #000000;
+}
+
+/* Morning Theme (6 AM to 12 PM) - Soft, warm daylight */
+body.theme-morning {
+    --bg-main: #fcf6f0;
+    --bg-card: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --accent: #e17055; /* Warm Sunrise Orange */
+    --nav-bg: #ffeaa7;
+}
+
+/* Afternoon Theme (12 PM to 6 PM) - Bright, crisp daylight */
+body.theme-afternoon {
+    --bg-main: #f1f2f6;
+    --bg-card: #ffffff;
+    --text-main: #2f3542;
+    --text-muted: #57606f;
+    --accent: #1e90ff; /* Tech Blue */
+    --nav-bg: #dfe4ea;
+}
+
+/* Evening Theme (6 PM to 9 PM) - Dimming, sunset vibes */
+body.theme-evening {
+    --bg-main: #2c2c54;
+    --bg-card: #40407a;
+    --text-main: #f1f2f6;
+    --text-muted: #aaa69d;
+    --accent: #ffb142; /* Sunset Gold */
+    --nav-bg: #212140;
+}
+
+/* Night Theme (9 PM to 6 AM) - Default Dark Mode */
+body.theme-night {
+    --bg-main: #121212;
+    --bg-card: #1a1a1a;
+    --text-main: #e0e0e0;
+    --text-muted: #888888;
+    --accent: #76b900;
+    --nav-bg: #000000;
+}
+
+/* Apply Variables to the Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-main) !important;
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+    background: var(--bg-card) !important;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+    transition: background-color 0.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: var(--text-muted);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: var(--nav-bg) !important;
+    transition: background-color 0.5s ease;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent);
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.main-content { flex: 3; }
+.sidebar {
+    flex: 1;
+    background: var(--bg-card) !important;
+    padding: 25px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--accent);
+}
+
+.post-card {
+    background: var(--bg-card) !important;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease;
+}
+
+.post-image {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-image img:hover {
+    transform: scale(1.02);
+}
+
+.post-card h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.read-more:hover {
+    opacity: 0.8;
+}
+
+.external-links {
+    background: var(--bg-card) !important;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    transition: background-color 0.5s ease;
+}
+
+.external-links h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+}
+
+.external-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.external-links ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 8px 16px;
+    background: var(--nav-bg);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.external-links ul li a:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+}
+
+footer {
+    background: var(--bg-card) !important;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    transition: background-color 0.5s ease;
+}
+
+footer p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
