@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yoyo-shang.github.io/FectTech-News/sitemap.xml
